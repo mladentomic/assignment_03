@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Assignment 03 - Kreiranje Responsive Galerije</title>
+
+    <style>
+
+        body {
+            font-family: sans-serif;
+            color: black;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-gap: 50px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            grid-template-rows: minmax(133px);
+        }
+
+        header,
+        footer {
+            margin-left: 5px;
+            margin-right: 5px;
+            flex: 0 1 100%;
+            grid-column: 1 / -1;
+            text-align: left;
+            font-size: 1.3em;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .box {
+            border-radius: 8px;
+            padding: 1em;
+            margin-left: 5px;
+            margin-right: 5px;
+            flex: 1 1 240px;
+            background-color: rgb(139, 189, 218);
+            text-align: center;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        .wrapper>* {
+            margin-bottom: 10px;
+        }
+
+        @supports (display: grid) {
+            .wrapper>* {
+                margin: 8;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <header>
+            <h1>Gallery Heading</h1>
+        </header>
+
+        <div class="box"><img src="placeholder-image.png" alt="Thumbs">
+            <p>Image Title</p>
+        </div>
+        <div class="box"><img src="placeholder-image.png" alt="Thumbs">
+            <p>Image Title</p>
+        </div>
+        <div class="box"><img src="placeholder-image.png" alt="Thumbs">
+            <p>Image Title</p>
+        </div>
+        <div class="box"><img src="placeholder-image.png" alt="Thumbs">
+            <p>Image Title</p>
+        </div>
+        <div class="box"><img src="placeholder-image.png" alt="Thumbs">
+            <p>Image Title</p>
+        </div>
+        <div class="box"><img src="placeholder-image.png" alt="Thumbs">
+            <p>Image Title</p>
+        </div>
+        <div class="box"><img src="placeholder-image.png" alt="Thumbs">
+            <p>Image Title</p>
+        </div>
+        <div class="box"><img src="placeholder-image.png" alt="Thumbs">
+            <p>Image Title</p>
+        </div>
+        <div class="box"><img src="placeholder-image.png" alt="Thumbs">
+            <p>Image Title</p>
+        </div>
+        <div class="box"><img src="placeholder-image.png" alt="Thumbs">
+            <p>Image Title</p>
+        </div>
+
+        <footer>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida, enim nec fermentum ullamcorper, eros metus rhoncus ante, in ornare arcu purus id est. Duis viverra mi felis, nec feugiat tortor scelerisque ut. Ut efficitur ac ipsum a viverra. Phasellus gravida, enim nec fermentum ullamcorper, eros metus rhoncus ante, in ornare arcu purus id est. Duis viverra mi felis, nec feugiat tortor scelerisque ut. Ut efficitur ac ipsum a viverra.</footer>
+
+    </div>
+
+</body>
+
+</html>
